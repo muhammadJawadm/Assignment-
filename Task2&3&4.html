@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Jawad 210939</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: lightblue;
+        margin: 30px;
+        padding: 20px;
+      }
+      h1 {
+        color: red;
+      }
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        height: 50%;
+        margin-bottom: 40px;
+      }
+      th,
+      td {
+        border: 2px solid silver;
+        padding: 8px;
+        text-align: left;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+
+    <script>
+      function displayInputValue() {
+        var userInput = document.getElementById("textInput").value;
+        alert("Text Input Value: " + userInput);
+      }
+
+      function displayTextareaValue() {
+        var userTextarea = document.getElementById("textareaInput").value;
+        alert("Textarea Value: " + userTextarea);
+      }
+
+      function displayCheckboxValues() {
+        var checkboxes = document.getElementsByName("checkboxInput");
+        var selectedValues = [];
+        checkboxes.forEach(function (checkbox) {
+          if (checkbox.checked) {
+            selectedValues.push(checkbox.value);
+          }
+        });
+        alert("Checkbox Selected Values: " + selectedValues.join(", "));
+      }
+
+      function displayRadioButtonValue() {
+        var radios = document.getElementsByName("radioInput");
+        var selectedValue;
+        radios.forEach(function (radio) {
+          if (radio.checked) {
+            selectedValue = radio.value;
+          }
+        });
+        alert("Radio Button Selected Value: " + selectedValue);
+      }
+
+      function displaySelectedOption() {
+        var selectDropdown = document.getElementById("selectInput");
+        var selectedIndex = selectDropdown.selectedIndex;
+        var selectedOption = selectDropdown.options[selectedIndex].text;
+        alert("Selected Option from Dropdown: " + selectedOption);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Task:2</h1>
+      <div>
+        <h1 style="color: blue">Welcome to Our Website</h1>
+        <p>This paragraph provides some introductory text.</p>
+        <a href="https://example.com" style="text-decoration: none"
+          >Visit Our Example Page</a
+        >
+
+        <table border="1">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>Haris</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Jawad</td>
+            <td>30</td>
+          </tr>
+        </table>
+        <form action="/submit" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <button type="submit" style="background-color: green; color: white">
+            Submit
+          </button>
+        </form>
+        <div>
+          h1: Main heading styled in blue color.
+          p: Paragraph providing introductory content.
+          a: Hyperlink styled without underlining.
+          table: Data presented in table format.
+          form: Form allowing user input with a styled submit button.
+        </div>
+      </div>
+
+      <div></div>
+      <h1>Task:3&4</h1>
+
+      <div>
+        <h2>
+          Evaluating the Impact of Effective Page Layouts on User Experience:
+        </h2>
+        <p>
+          Effective page layouts significantly influence user experience on
+          websites. Well-structured layouts facilitate easy navigation,
+          rapid information retrieval, and comprehension of website structure.
+          Clear navigation paths and visual hierarchy improve readability and
+          reduce user frustration. Visually appealing layouts attract users'
+          attention and encourage engagement with content. Consistent branding,
+          balanced design elements, and aesthetically pleasing typography create
+          positive initial impressions and sustained user interaction.
+          Responsive layouts ensure consistent user experiences across various
+          devices. Strategic placement of call-to-action (CTA) elements guides
+          users towards desired actions, increasing conversion rates.
+          Accessible layouts prioritize usability for all users, including those
+          with disabilities. Clear navigation, proper contrast, and
+          keyboard-friendly design enhance accessibility, ensuring everyone can
+          access and interact with content effectively. In summary, effective
+          page layouts significantly impact user experience by enhancing
+          navigation, readability, visual appeal, responsiveness, and
+          accessibility, ultimately contributing to the success of a website.
+        </p>
+
+        <h2>Comparative Analysis of Different HTML Form Elements:</h2>
+        <table>
+          <tr>
+            <th>Form Element</th>
+            <th>Functionality</th>
+          </tr>
+          <tr>
+            <td>Text Input</td>
+            <td>Accepts single-line text input</td>
+          </tr>
+          <tr>
+            <td>Textarea</td>
+            <td>Allows multi-line text input</td>
+          </tr>
+          <tr>
+            <td>Checkbox</td>
+            <td>Enables selection of multiple options from a list</td>
+          </tr>
+          <tr>
+            <td>Radio Button</td>
+            <td>Allows selection of one option from a list</td>
+          </tr>
+          <tr>
+            <td>Select Dropdown</td>
+            <td>Displays a dropdown menu with predefined options</td>
+          </tr>
+          <tr>
+            <td>Button</td>
+            <td>Triggers an action upon click (e.g., form submission)</td>
+          </tr>
+        </table>
+      </div>
+      <h1>Task:4</h1>
+      <h2>HTML Form Elements with Functionality</h2>
+      <table>
+        <tr>
+          <th>Form Element</th>
+          <th>Functionality</th>
+        </tr>
+        <tr>
+          <td>Text Input</td>
+          <td>
+            <input type="text" id="textInput" /><button
+              onclick="displayInputValue()"
+            >
+              Submit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>Textarea</td>
+          <td>
+            <textarea id="textareaInput"></textarea
+            ><button
